@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+    <style>
+    body {
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    text-align: center;
+    transition: background-color 1s ease;
+    }
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: white;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+      button:hover {
+        background-color: lightgrey;
+        transform: scale(1.05);
+      }
+      </style>
+  </head>
+  <body>
+    <h1>text</h1>
+    <button onclick="changeBackground()">button</button>
+
+    <script>
+      const colors = ["lightblue", "peachpuff", "pink", "blue", "blue"]
+        let index = 0
+
+          function changeBackground() {
+            index = (index + 1) % colors.length;
+            document.body.style.backgroundColor = colors[index];
+          }
+    </script>
+  </body>
+</html>
